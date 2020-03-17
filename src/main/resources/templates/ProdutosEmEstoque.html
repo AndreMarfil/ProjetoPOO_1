@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>PRODUTOS EM ESTOQUE</h1>
+    <table>
+        <tr th:each="Produto: ${produtos}">
+            <td th:text="${Produto?.codigo}"></td>
+            <td th:text="${Produto?.nome}"></td>
+            <td th:text="${Produto?.valor}"></td>
+            <td th:text="${Produto?.estoque}"></td>
+        </tr>
+    </table>
+
+    <button onclick="voltar ()">VOLTAR</button> 
+    <script>voltar ()
+    {window.open("http://localhost:8080/");}</script> 
+    
+</body>
+</html>

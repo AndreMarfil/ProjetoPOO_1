@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PRODUTO ENCONTRADO</h1> <!-- Titulo da página-->
+    <div th:if="${Produto}"> 
+        <table> <!-- Forma de mostrar em tabela-->
+            <td th:text="${Produto?.codigo}"></td>
+            <td th:text="${Produto?.nome}"></td>
+            <td th:text="${Produto?.valor}"></td>
+            <td th:text="${Produto?.estoque}"></td>
+        </table>
+    </div>
+
+    <div th:unless="${Produto}"> <!-- Caso o produto não exista-->
+        <div>
+            ERRO ENCONTRADO - PRODUTO INVÁLIDO
+        </div>
+    </div>
+
+</body>
+</html>
